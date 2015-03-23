@@ -1,0 +1,6 @@
+(B) 2014-03-06 switch to vundle management (started this on 2015-03-15; will have to test on Windows before I remove more small programs; on 2015-03-23: it's working well on my home PC now; there are issues on work PC however; {{https://github.com/gmarik/Vundle.vim/issues/575}} quite weird)
+(B) 2015-03-16 Add (separate) my todo plugin to its own github repo
+(C) 2015-03-23 Adjust vtd button (plugin resides elsewhere now)
+(C) 2015-03-23 Think about vim sensible and sleuth instead of my personal settings
+(F) 2014-02-19 Put trading thoughts into their own folder and make them accessible via hotkey? [actually, the daily thing I do seems reasonable and is more in line with my overall thoughts]
+
