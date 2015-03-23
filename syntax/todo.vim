@@ -10,6 +10,7 @@ if exists("b:current_syntax")
 endif
 
 syntax match TodoDone '^[xX]\s.\+$' contains=TodoDate,TodoProject,TodoContext
+syntax match TodoAbandon '^[aA]\s.\+$' contains=TodoDate,TodoProject,TodoContext
 syntax match TodoPriorityA '^([aA])\s.\+$' contains=TodoDate,TodoProject,TodoContext
 syntax match TodoPriorityB '^([bB])\s.\+$' contains=TodoDate,TodoProject,TodoContext
 syntax match TodoPriorityC '^([cC])\s.\+$' contains=TodoDate,TodoProject,TodoContext
@@ -63,6 +64,8 @@ highlight default link TodoPriorityX Todo
 highlight default link TodoPriorityY Underlined
 "type is cyan
 highlight default link TodoPriorityZ Ignore
+highlight default link TodoAbandon Ignore
+
 highlight default link TodoDate PreProc
 highlight default link TodoProject Special
 highlight default link TodoContext Special

@@ -89,13 +89,14 @@ vim.command("return " + str(out_list))
 EOF
 endfun
 
-fun! TodoToggleDone()
+fun! TodoTogglePrepend(prependchar)
 python << endpython
+py_prepend= vim.eval('a:prependchar') + ' '
 l = vim.current.line
-if l[:2]=='x ':
+if l[:2]==py_prepend:
     vim.current.line = l[2:]
 else:
-    vim.current.line = 'x ' + l
+    vim.current.line =py_prepend + l
 endpython
 endfun
 
