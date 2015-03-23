@@ -1,4 +1,6 @@
-
+(B) 2015-03-23 Make sure this is usable w/o stuff that is still lurking in my vimrc
+(C) 2015-03-23 Add readme / license
+(F) 2013-12-29 amend done button s.t. it can insert a date?
 x (A) 2013-12-23 Open next file should write before moving
 x (A) 2013-12-23 Prio change should be aware of done marker - x (B) currently leads to (A) x (B) strings >_<
 x (A) 2013-12-23 check OpenFileManager and OpenFileUnderCursor in Linux
@@ -9,14 +11,11 @@ x (A) Add License, author snippet (from :DoxLic)
 x (A) Get first pydoc string [changing the next docstring is way too complicated to actually be worthwhile I think]
 x (A) jump to @todo with <c-j>? [added that <leader>fi (for fix)
 x (A) make new project folder for stuff that always has to be done when there is too much time
-(B) 2015-03-23 Make sure this is usable w/o stuff that is still lurking in my vimrc
 x (B) 2013-11-24 Experiment with ack [I installed ag instead b/c that comes as cross-platform C++ exe, not as a perl script where I also need to install a bunch of other things]
 x (B) 2014-02-06 Why does inserting in Linux not add a space after the date? (Alt+I that is)
 x (B) 2015-03-15 move brackets backwards key
 x (B) 2015-03-23 There should be abandon button (changing many prios is tiring)
 x (C) 2013-12-23 Insert new should insert above / below depending on shift?
-(C) 2015-03-23 Add readme / license
 x (C) 2013-12-25 Function for link insertion {{}} paste or so Also think about moving to the next such link
 x (C) 2014-03-09 Add some encryption functionality to my diary (pycrypto or pgpvim come to mind) [ccrypt does this now w/ cpt files]
 x (C) 2014-04-01 Can I sort only that part of the file that doesn't contain my comments? {{https://github.com/sjurgemeyer/vim-todo.txt-plugin/blob/master/plugin/todo.vim}} looks promising
-(F) 2013-12-29 amend done button s.t. it can insert a date?
