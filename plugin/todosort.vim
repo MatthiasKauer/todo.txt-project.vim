@@ -4,9 +4,9 @@
 "need for priority sorting
 
 function! SortByPrio()
-    :sort/(\(\w\))/r"
+    " :sort/(\(\w\))/r"
+    :sort/\(x \)\?(\w)/r
 endfunction
-
 
 
 function! SortByContext()

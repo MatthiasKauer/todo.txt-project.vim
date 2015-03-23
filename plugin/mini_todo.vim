@@ -100,23 +100,27 @@ else:
 endpython
 endfun
 
-fun! InsertNewLine(insert_string)
+fun! InsertNewLine(insert_string, insert_before)
 python << pythonend
 l = vim.current.line
 w = vim.current.window
 b = vim.current.buffer
 row = w.cursor[0]
 py_str = vim.eval("a:insert_string")
+py_before = int(vim.eval('a:insert_before')) #int req. b/c vim would eval to string otherwise
 #py_str += " ."
-if len(l) > 0:
-    b.append(py_str, row)    
-    row = row+1
-else:
+if len(l) == 0: #if line still empty, just add it here
     vim.current.line = py_str
+else: #add it below this line
+    if(py_before):
+        b.append(py_str, row-1) #appends line to buffer, see http://vimdoc.sourceforge.net/htmldoc/if_pyth.html
+        #row = row-1
+    else:
+        b.append(py_str, row) #appends line to buffer, see http://vimdoc.sourceforge.net/htmldoc/if_pyth.html
+        row = row+1 #increase row (where cursor will be set afterwards)
 
 w.cursor = (row, len(py_str))
-#startinsert! = append
-vim.command("startinsert!")
+vim.command("startinsert!") #goes to insert mode (as pressing 'a')
 pythonend
 endfun
 
