@@ -5,7 +5,7 @@
 
 function! SortByPrio()
     " :sort/(\(\w\))/r"
-    :sort/\(x \)\?(\w)/r
+    :sort/\([ax] \)\?(\w)/r
 endfunction
 
 
