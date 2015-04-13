@@ -1,5 +1,7 @@
-(B) 2015-03-23 Make sure this is usable w/o stuff that is still lurking in my vimrc
+(B) 2015-04-13 Sorting should leave text below the priorities (or make this an option even)
 (C) 2015-03-23 Add readme / license
+(C) 2015-04-06 Alt-L doesn't find second hit on the line first
+(D) 2015-03-23 Make sure this is usable w/o stuff that is still lurking in my vimrc
 (F) 2013-12-29 amend done button s.t. it can insert a date?
 x (A) 2013-12-23 Open next file should write before moving
 x (A) 2013-12-23 Prio change should be aware of done marker - x (B) currently leads to (A) x (B) strings >_<
