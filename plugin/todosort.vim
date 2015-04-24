@@ -6,6 +6,8 @@
 function! SortByPrio()
     " :sort/(\(\w\))/r"
     :sort/\([ax] \)\?(\w)/r
+    "http://vim.wikia.com/wiki/Search_for_lines_not_containing_pattern_and_other_helpful_searches
+    :sort/^\(\(.*(\w).*\)\@!.\)*$/r
 endfunction
 
 
