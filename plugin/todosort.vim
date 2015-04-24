@@ -10,6 +10,27 @@ function! SortByPrio()
     :sort/^\(\(.*(\w).*\)\@!.\)*$/r
 endfunction
 
+function! SortByPrioPy()
+:sort/\([ax] \)\?(\w)/r "orders (A) etc. appropriately, but puts comment text above tasks
+python<<EOF
+import vim, re
+b = vim.current.buffer
+nontask_lines = []
+nontask_idx = []
+for i, line in enumerate(b):
+    m = re.match("([ax] )?\(\w\)", line)
+    if m is None:
+        nontask_idx.append(i)
+        nontask_lines.append(line)
+        #print line
+for i in sorted(nontask_idx, reverse=True):
+    del b[i]
+#del b[nontask_idx]
+for line in nontask_lines:
+    b.append(line)
+EOF
+endfunction
+
 
 function! SortByContext()
     :let sortString = '\@[^ $]+'
