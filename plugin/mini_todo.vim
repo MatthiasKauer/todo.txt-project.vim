@@ -288,14 +288,14 @@ endfun
 
 fun! OpenProjectPlan()
     " let the_path="~/SparkleShare/mytodolist"
-    let the_path="~/Seafile/mytodolist"
+    " let the_path="~/Seafile/mytodolist"
     silent exe ":wall"
-    silent exe ":cd " . the_path
+    silent exe ":cd " . g:mini_todo_dir
     silent exe ":only"
 
     let todayname=strftime("%Y-%m-%d"). ".tcl"
 
-    silent exe ":e " . the_path . "/" . todayname
+    silent exe ":e " . g:mini_todo_dir . "/" . todayname
     let l:path=expand('%:p:h')
     let proj_path = l:path . "/active_proj"
 
@@ -303,7 +303,7 @@ fun! OpenProjectPlan()
 
     " echo "ytd: " . ytdname . ", today: ". todayname
     silent exe ":e " . projname
-    silent exe ":sp " . the_path . "/" . todayname
+    silent exe ":sp " . g:mini_todo_dir . "/" . todayname
     silent exe ":wincmd b"
 endfun
 
