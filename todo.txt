@@ -1,4 +1,5 @@
 (B) 2015-04-13 Sorting should leave text below the priorities (or make this an option even)
+(C) 2015-06-06 Alt-L and Alt' has trouble opening the second item on the line (see 2015-06-05 file where I wrote to Michael and Judith)
 (C) 2015-03-23 Add readme / license
 (C) 2015-04-06 Alt-L doesn't find second hit on the line first
 (D) 2015-03-23 Make sure this is usable w/o stuff that is still lurking in my vimrc
