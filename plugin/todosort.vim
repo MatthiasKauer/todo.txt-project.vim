@@ -10,8 +10,14 @@ function! SortByPrio()
     ":sort/^\(\(.*(\w).*\)\@!.\)*$/r
 endfunction
 
-function! SortByPrioPy()
-:sort/\([ax] \)\?(\w)/r "orders (A) etc. appropriately, but puts comment text above tasks
+function! SortByPrioPy(sortcomments)
+if a:sortcomments
+    "comments should be at the end of the active tasks
+    :sort/\([ax] \)\?(\w)/r
+else "comments stay within the original priority order (this is harder to get than I thought)
+    :sort/(\w)/r
+endif
+
 python<<EOF
 import vim, re
 b = vim.current.buffer
